@@ -1,0 +1,751 @@
+.contacts {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  border-bottom: 1px solid var(--dark-navy-blue);
+}
+
+.left__side,
+.right__side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left__side {
+  gap: 20px;
+  padding: 50px;
+  margin-left: 50px;
+  /* align-self: flex-start; */
+}
+
+.left__side h3 {
+  color: var(--light-lavender);
+  font-size: 3rem;
+  font-weight: 700;
+  align-self: start;
+  margin-bottom: 20px;
+}
+
+.left__side p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--dark-navy-blue);
+  margin-bottom: 20px;
+}
+
+.contact__information {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact__information .info a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contacts__icons {
+  border: 1px solid var(--light-lavender);
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+}
+
+.contact__icon {
+  color: var(--light-lavender);
+  font-size: 3.5rem;
+}
+
+.contacts__icons:hover {
+  opacity: 0.7;
+}
+
+.contact__text p {
+  margin-bottom: 8px;
+}
+
+.contact__text p:first-of-type {
+  color: var(--light-pink);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.contact__text p:last-of-type {
+  color: var(--dark-navy-blue);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.right__side {
+  padding: 20px;
+  justify-content: center;
+}
+
+form {
+  background-color: var(--pale-blue);
+  border: 2px solid var(--light-lavender);
+  border-radius: 25px;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form h4 {
+  color: var(--dark-navy-blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  flex: 1;
+  padding: 5px 20px;
+}
+
+input {
+  height: 50px;
+  border: 1px solid var(--light-lavender);
+  border-radius: 25px;
+  color: var(--dark-navy-blue);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+textarea {
+  height: 200px;
+  border: 1px solid var(--light-lavender);
+  border-radius: 25px;
+  resize: none;
+  color: var(--dark-navy-blue);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.contacts .row:first-of-type input:first-of-type {
+  margin-right: 10px;
+}
+
+.send__button {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid var(--light-lavender);
+  background-color: var(--pale-blue);
+  border-radius: 50px;
+  color: var(--dark-navy-blue);
+  padding: 8px 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.send__button::before,
+.send__button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--light-lavender);
+  transition: 1s ease;
+}
+
+.send__button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.send__button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.send__button:hover::before,
+.send__button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.send__button:hover {
+  color: var(--main-bg-color);
+}
+
+.send__button:active {
+  filter: brightness(0.8);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+  .contacts {
+    margin: 0 -50px;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .left__side h3 {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .left__side {
+    gap: 20px;
+    padding: 30px 80px;
+    margin-left: 0;
+  }
+
+  .left__side h3 {
+    font-size: 2.7rem;
+
+    margin-bottom: 20px;
+  }
+
+  .left__side p {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .contact__information {
+    gap: 30px;
+    margin-top: 20px;
+  }
+
+  .contact__information .info a {
+    gap: 30px;
+  }
+
+  .contacts__icons {
+    padding: 20px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .contact__text p {
+    margin-bottom: 8px;
+  }
+
+  .contact__text p:first-of-type {
+    font-size: 2rem;
+  }
+
+  .contact__text p:last-of-type {
+    font-size: 1.8rem;
+  }
+
+  .right__side {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  form {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    gap: 22px;
+  }
+
+  form h4 {
+    font-size: 2.4rem;
+    margin: 15px 0;
+  }
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 10px 30px;
+  }
+
+  input {
+    width: 280px;
+    height: 50px;
+    font-size: 1.8rem;
+  }
+
+  textarea {
+    height: 200px;
+    font-size: 1.8rem;
+  }
+
+  .contacts .row:first-of-type input:first-of-type {
+    margin-right: 10px;
+  }
+
+  .send__button {
+    padding: 8px 10px;
+    font-size: 1.8rem;
+  }
+
+  .send__button::before,
+  .send__button::after {
+    width: 50px;
+    height: 50px;
+  }
+
+  .send__button:hover::before,
+  .send__button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .left__side {
+    gap: 20px;
+    padding: 30px 60px;
+    margin-left: 0;
+  }
+
+  .left__side h3 {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+  }
+
+  .left__side p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .contact__information {
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .contact__information .info a {
+    gap: 30px;
+  }
+
+  .contacts__icons {
+    padding: 20px;
+    height: 70px;
+    width: 70px;
+  }
+
+  .contact__icon {
+    font-size: 3rem;
+  }
+
+  .contact__text p {
+    margin-bottom: 8px;
+  }
+
+  .contact__text p:first-of-type {
+    font-size: 1.8rem;
+  }
+
+  .contact__text p:last-of-type {
+    font-size: 1.6rem;
+  }
+
+  .right__side {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  form {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    gap: 22px;
+  }
+
+  form h4 {
+    font-size: 2.2rem;
+    margin: 15px 0;
+  }
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 10px 30px;
+  }
+
+  input {
+    width: 240px;
+    height: 50px;
+    font-size: 1.6rem;
+  }
+
+  textarea {
+    height: 170px;
+    font-size: 1.6rem;
+  }
+
+  .contacts .row:first-of-type input:first-of-type {
+    margin-right: 10px;
+  }
+
+  .send__button {
+    padding: 8px 10px;
+    font-size: 1.6rem;
+  }
+
+  .send__button::before,
+  .send__button::after {
+    width: 50px;
+    height: 50px;
+  }
+
+  .send__button:hover::before,
+  .send__button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .left__side {
+    gap: 20px;
+    padding: 30px 60px;
+    margin-left: 0;
+  }
+
+  .left__side h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .left__side p {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .contact__information {
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .contact__information .info a {
+    gap: 30px;
+  }
+
+  .contacts__icons {
+    padding: 30px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .contact__icon {
+    font-size: 2.8rem;
+  }
+
+  .contact__text p {
+    margin-bottom: 8px;
+  }
+
+  .contact__text p:first-of-type {
+    font-size: 1.6rem;
+  }
+
+  .contact__text p:last-of-type {
+    font-size: 1.4rem;
+  }
+
+  .right__side {
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  form {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    gap: 13px;
+  }
+
+  form h4 {
+    font-size: 2.1rem;
+    margin: 15px 0;
+  }
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 10px 20px;
+  }
+
+  input {
+    width: 180px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+
+  textarea {
+    height: 160px;
+    font-size: 1.4rem;
+  }
+
+  .contacts .row:first-of-type input:first-of-type {
+    margin-right: 10px;
+  }
+
+  .send__button {
+    padding: 8px 10px;
+    font-size: 1.4rem;
+  }
+
+  .send__button::before,
+  .send__button::after {
+    width: 50px;
+    height: 50px;
+  }
+
+  .send__button:hover::before,
+  .send__button:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .left__side {
+    gap: 10px;
+    padding: 30px 20px;
+    margin-left: 0;
+  }
+
+  .left__side h3 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+  }
+
+  .left__side p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .contact__information {
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .contact__information .info a {
+    gap: 30px;
+  }
+
+  .contacts__icons {
+    padding: 20px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .contact__icon {
+    font-size: 2.5rem;
+  }
+
+  .contact__text p {
+    margin-bottom: 8px;
+  }
+
+  .contact__text p:first-of-type {
+    font-size: 1.4rem;
+  }
+
+  .contact__text p:last-of-type {
+    font-size: 1.2rem;
+  }
+
+  .right__side {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  form {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    gap: 1px;
+    border-radius: 20px;
+  }
+
+  form h4 {
+    font-size: 1.7rem;
+    margin: 10px 0;
+  }
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 8px 10px;
+  }
+
+  input {
+    width: 140px;
+    height: 33px;
+    font-size: 1.2rem;
+  }
+
+  textarea {
+    height: 140px;
+    font-size: 1.2rem;
+  }
+
+  .contacts .row:first-of-type input:first-of-type {
+    margin-right: 10px;
+  }
+
+  .send__button {
+    padding: 6px 8px;
+    font-size: 1.3rem;
+  }
+
+  .send__button::before,
+  .send__button::after {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .left__side {
+    gap: 10px;
+    padding: 30px 20px;
+    margin-left: 0;
+  }
+
+  .left__side h3 {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+  }
+
+  .left__side p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .contact__information {
+    gap: 15px;
+    margin-top: 5px;
+  }
+
+  .contact__information .info a {
+    gap: 20px;
+  }
+
+  .contacts__icons {
+    padding: 20px;
+    height: 45px;
+    width: 45px;
+  }
+
+  .contact__icon {
+    font-size: 2.1rem;
+  }
+
+  .contact__text p {
+    margin-bottom: 5px;
+  }
+
+  .contact__text p:first-of-type {
+    font-size: 1.2rem;
+  }
+
+  .contact__text p:last-of-type {
+    font-size: 1rem;
+  }
+
+  .right__side {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  form {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    gap: 1px;
+  }
+
+  form h4 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 8px 10px;
+  }
+
+  input {
+    width: 120px;
+    height: 30px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    height: 100px;
+    font-size: 1rem;
+  }
+
+  .contacts .row:first-of-type input:first-of-type {
+    margin-right: 10px;
+  }
+
+  .send__button {
+    padding: 6px 8px;
+    font-size: 1.2rem;
+  }
+
+  .send__button::before,
+  .send__button::after {
+    width: 30px;
+    height: 30px;
+  }
+}
