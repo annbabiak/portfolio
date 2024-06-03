@@ -33,8 +33,17 @@ function About() {
           resume by simply clicking the button below.
         </p>
         <div>
-          <a
+          {/* <a
             href="../../../../CV/CV_Anna_Babiak_Junior_Front-End_Developer.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cv__button"
+          >
+            Download CV
+          </a> */}
+          <a
+            href="/portfolio/CV/CV_Anna_Babiak_Junior_Front-End_Developer.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
